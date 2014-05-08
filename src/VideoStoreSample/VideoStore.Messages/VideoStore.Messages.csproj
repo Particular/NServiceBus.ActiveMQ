@@ -53,8 +53,6 @@
     </Compile>
     <Compile Include="Events\OrderPlaced.cs">
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-    </Compile>
     <Compile Include="RequestResponse\ProvisionDownloadRequest.cs">
     </Compile>
     <Compile Include="RequestResponse\ProvisionDownloadResponse.cs">

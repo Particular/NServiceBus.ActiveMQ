@@ -23,7 +23,7 @@ namespace VideoStore.Common
             }
         }
 
-        public void MutateOutgoing(object[] messages, TransportMessage transportMessage)
+        public void MutateOutgoing(object message, TransportMessage transportMessage)
         {
             transportMessage.Headers["Debug"] = Debug.ToString();
         }

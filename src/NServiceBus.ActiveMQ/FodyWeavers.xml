@@ -5,6 +5,5 @@
       Apache.NMS.ActiveMQ
     </IncludeAssemblies>
   </Costura>
-  <GitFlowVersion />
   <Janitor />
-</Weavers>
+</Weavers>  

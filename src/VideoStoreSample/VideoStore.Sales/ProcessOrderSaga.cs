@@ -56,11 +56,11 @@
 
             MarkAsComplete();
 
-            Bus.Publish(Bus.CreateInstance<OrderCancelled>(o =>
+            Bus.Publish<OrderCancelled>(o =>
                 {
                     o.OrderNumber = message.OrderNumber;
                     o.ClientId = message.ClientId;
-                }));
+                });
 
             Console.Out.WriteLine("Order #{0} was cancelled.", message.OrderNumber);
         }

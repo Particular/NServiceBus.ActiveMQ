@@ -20,7 +20,6 @@ namespace VideoStore.ECommerce
                      .UseTransport<ActiveMQ>()
                      .PurgeOnStartup(true)
                      .UnicastBus()
-                     .RunHandlersUnderIncomingPrincipal(false)
                      .RijndaelEncryptionService()
                      .CreateBus()
                      .Start(() => Configure.Instance.ForInstallationOn<NServiceBus.Installation.Environments.Windows>()

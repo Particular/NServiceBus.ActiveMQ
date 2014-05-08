@@ -69,8 +69,6 @@
     </Compile>
     <Compile Include="OrderAcceptedHandler.cs">
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-    </Compile>
     <Compile Include="SendLimitedTimeOffer.cs">
     </Compile>
     <Compile Include="SendWelcomePacket.cs">

@@ -6,9 +6,6 @@
     using Apache.NMS.Util;
     using FluentAssertions;
     using Moq;
-
-    using NServiceBus.Transports.ActiveMQ.SessionFactories;
-
     using NUnit.Framework;
     using Serialization;
 

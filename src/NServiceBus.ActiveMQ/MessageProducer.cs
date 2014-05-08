@@ -25,7 +25,7 @@
             {
                 using (var producer = session.CreateProducer())
                 {
-                    var producerId = this.GetProducerId(producer);
+                    var producerId = GetProducerId(producer);
                     var jmsMessage = activeMqMessageMapper.CreateJmsMessage(message, session, producerId);
                     producer.Send(destinationEvaluator.GetDestination(session, destination, destinationPrefix), jmsMessage);
                 }

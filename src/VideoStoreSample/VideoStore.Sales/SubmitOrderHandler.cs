@@ -26,12 +26,12 @@
             Console.Out.WriteLine("CreditCard Expiration Date is {0}", message.EncryptedExpirationDate);
 
             //tell the client that we received the order
-            Bus.Publish(Bus.CreateInstance<OrderPlaced>(o =>
+            Bus.Publish<OrderPlaced>(o =>
                 {
                     o.ClientId = message.ClientId;
                     o.OrderNumber = message.OrderNumber;
                     o.VideoIds = message.VideoIds;
-                }));
+                });
         }
     }
 }

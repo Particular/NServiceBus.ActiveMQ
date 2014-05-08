@@ -82,7 +82,7 @@
             const int InitialNumberOfWorkers = 5;
             var address = new Address("someQueue", "machine");
 
-            testee.Init(address, TransactionSettings.Default, m => { return true; }, (s, exception) => { });
+            testee.Init(address, TransactionSettings.Default, m => true, (s, exception) => { });
             testee.Start(InitialNumberOfWorkers);
             testee.Stop();
 
@@ -95,7 +95,7 @@
             const int InitialNumberOfWorkers = 5;
             var address = new Address("someQueue", "machine");
 
-            testee.Init(address, TransactionSettings.Default, m => { return true; }, (s, exception) => { });
+            testee.Init(address, TransactionSettings.Default, m => true, (s, exception) => { });
             testee.Start(InitialNumberOfWorkers);
             testee.Stop();
 

@@ -5,9 +5,6 @@ namespace NServiceBus.Transports.ActiveMQ
     using System.Linq;
     using Apache.NMS;
     using Apache.NMS.Util;
-
-    using NServiceBus.Transports.ActiveMQ.SessionFactories;
-
     using Serialization;
 
     public class ActiveMqMessageMapper : IActiveMqMessageMapper
@@ -73,7 +70,7 @@ namespace NServiceBus.Transports.ActiveMQ
             if (transportMessage.Headers.ContainsKey(ProducerIdHeader) &&
                 !message.NMSMessageId.StartsWith(transportMessage.Headers[ProducerIdHeader]))
             {
-                this.DiscardNServiceBusHeadersCopiedByNativeClient(transportMessage);
+                DiscardNServiceBusHeadersCopiedByNativeClient(transportMessage);
             }
 
             decoderPipeline.Decode(transportMessage, message);
