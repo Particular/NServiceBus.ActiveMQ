@@ -9,11 +9,20 @@
         {
             Consumer = consumer;
             Destination = temporaryDestination;
-            ExprirationDate = expirationDate;
+            ExpirationDate = expirationDate;
         }
 
         public IMessageConsumer Consumer { get; set; }
         public IDestination Destination { get; set; }
-        public DateTime ExprirationDate { get; set; }
+
+        [Obsolete]
+        // ReSharper disable once IdentifierTypo
+        public DateTime ExprirationDate
+        {
+            get { return ExpirationDate; }
+            set { ExpirationDate = value; }
+        }
+
+        public DateTime ExpirationDate { get; set; }
     }
 }

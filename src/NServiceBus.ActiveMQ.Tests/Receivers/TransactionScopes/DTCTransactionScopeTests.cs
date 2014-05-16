@@ -53,7 +53,7 @@
 
             Action action = () =>
                 {
-                    using (var tx = new DTCTransactionScope(null, new TransactionOptions(), sessionFactoryMock.Object))
+                    using (new DTCTransactionScope(null, new TransactionOptions(), sessionFactoryMock.Object))
                     {
                         Transaction.Current.TransactionCompleted +=
                             (s, e) => transactionStatus = e.Transaction.TransactionInformation.Status;

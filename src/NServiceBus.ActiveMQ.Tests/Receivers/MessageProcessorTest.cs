@@ -232,12 +232,11 @@ order = string.Empty;
             testee.Start(transactionSettings);
         }
 
-        private IQueue SetupGetQueue(Mock<ISession> sessionMock, string queue)
+        private void SetupGetQueue(Mock<ISession> sessionMock, string queue)
         {
             var destinationMock = new Mock<IQueue>();
             sessionMock.Setup(s => s.GetQueue(queue)).Returns(destinationMock.Object);
             destinationMock.Setup(destination => destination.QueueName).Returns(queue);
-            return destinationMock.Object;
         }
 
         
