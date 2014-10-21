@@ -1,6 +1,6 @@
 #### IMPORTANT NOTE: 
 
-ActiveMQ is not supported at this time by Particular Software. The code is available as-is, for legacy and community reference. 
+ActiveMQ Transport for NServiceBus is not supported at this time by Particular Software. The code is available as-is, for legacy and community reference. 
 
 For background, please refer to our [discussion group announcement regaring ActiveMQ support](https://groups.google.com/forum/#!searchin/particularsoftware/activemq/particularsoftware/2QWOxQsgusw/Bl_Nw02FpsYJ).
 
